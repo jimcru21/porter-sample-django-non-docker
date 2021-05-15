@@ -1,2 +1,2 @@
 
-web: gunicorn djangosample.wsgi --timeout 120
+web: gunicorn djangosample.wsgi --bind=0.0.0.0:80 --timeout 120
