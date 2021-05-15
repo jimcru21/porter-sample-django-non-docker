@@ -25,7 +25,9 @@ SECRET_KEY = 'nity(i8!d0k%mni_kfc04ezszj&mtlm(r*glt=(e$5%t#gp1ra'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", default='127.0.0.1').split(" ")
+
+ALLOWED_CIDR_NETS = os.environ.get("ALLOWED_CIDR_NETS", default='10.0.0.0/8').split(" ")
 
 
 # Application definition
@@ -40,6 +42,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'allow_cidr.middleware.AllowCIDRMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
