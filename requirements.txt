@@ -8,12 +8,14 @@ contextlib2==0.6.0
 distlib==0.3.0
 distro==1.4.0
 Django==3.2.3
+django-allow-cidr==0.3.1
 gunicorn==20.1.0
 html5lib==1.0.1
 idna==2.8
 ipaddr==2.2.0
 lockfile==0.12.2
 msgpack==0.6.2
+netaddr==0.8.0
 packaging==20.3
 pep517==0.8.2
 progress==1.5
@@ -26,4 +28,3 @@ six==1.14.0
 sqlparse==0.4.1
 urllib3==1.25.8
 webencodings==0.5.1
-
